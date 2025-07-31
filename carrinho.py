@@ -1,0 +1,36 @@
+# Lista para armazenar os produtos e preços
+carrinho = []
+total = 0.0
+
+# Entrada do número de itens
+n = int(input().strip())
+
+# Loop para adicionar itens ao carrinho
+for _ in range(n):
+    linha = input().strip()
+    
+    # Encontra a última ocorrência de espaço para separar nome e preço
+    posicao_espaco = linha.rfind(" ")
+    
+    # Separa o nome do produto e o preço
+    item = linha[:posicao_espaco]
+    preco = float(linha[posicao_espaco + 1:])
+    
+    # Adiciona ao carrinho
+    carrinho.append((item, preco))
+    total += preco
+
+# TODO: Exiba os itens e o total da compra
+
+produtos = {
+
+    "pao": 3.5,
+    "leite": 4,
+    "arroz": 2.5,
+    "brigadeiro": 3,
+    "sorvete": 14.5,
+    "maca": 2,
+    "pera": 3.5,
+    "biscoito": 5.5
+}
+
